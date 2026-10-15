@@ -41,7 +41,7 @@ public final class PayTrackerScreen extends Screen {
 
     @Override
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float delta) {
-        renderBackground(graphics, mouseX, mouseY, delta);
+        graphics.fill(0, 0, width, height, 0xC0101010);
         int center = width / 2;
         graphics.drawCenteredString(font, title, center, 18, 0xFFFFFF);
         graphics.drawString(font, "Total tracked: $" + money(PayTrackerStore.getTotal()), center - 140, 88, 0x55FF55);
